@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import model.Professor;
+import model.ProfessorHorista;
+import model.ProfessorTitular;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ProfessorHorista professor1 = new ProfessorHorista();
+        professor1.setNome("Thiago Paula");
+        professor1.setIdade(38);
+        professor1.setMatricula("A1");
+        professor1.setHorasAula(168);
+        professor1.setValorHoraAula(32.81);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        professor1.calcSalario();
+
+        ProfessorTitular professor2 = new ProfessorTitular();
+        professor2.setNome("Paulo Sergio");
+        professor2.setIdade(56);
+        professor2.setMatricula("B1");
+        professor2.setSalario(4000);
+        professor2.setAnosInstituicao(12);
+
+        professor2.calcSalario();
     }
 }

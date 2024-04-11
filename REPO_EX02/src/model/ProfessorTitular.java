@@ -4,9 +4,7 @@ public class ProfessorTitular extends Professor {
     private int anosInstituicao;
     private double salario;
 
-    public ProfessorTitular(int anosInstituicao,double salario ){
-        this.anosInstituicao = anosInstituicao;
-        this.salario = salario;
+    public ProfessorTitular( ){
     }
 
     public int getAnosInstituicao() {
@@ -23,5 +21,12 @@ public class ProfessorTitular extends Professor {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    @Override
+    public void calcSalario() {
+        int aumento = this.getAnosInstituicao() / 5;
+        double salarioBruto = this.salario*(1+(aumento*0.05));
+        System.out.println(salarioBruto);
     }
 }

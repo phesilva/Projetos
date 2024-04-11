@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Professor {
+public class Professor {
     private String nome;
     private String matricula;
     private int idade;
@@ -33,7 +33,6 @@ public abstract class Professor {
         this.idade = idade;
     }
 
-    public void calcSalario(double valor){
-
+    public void calcSalario(){
     }
 }
